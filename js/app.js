@@ -305,6 +305,23 @@ function inputCheck() {
   }
 }
 
+function showPopup() {
+  if (gamemodePopup.style.display === "none") {
+    arcadeContainer.style.display = "none";
+    normalModeContainer.style.display = "none";
+    gamemodePopup.className = "fade-in-fwd";
+    gamemodePopup.style.display === "flex";
+  }
+  if (gamemodePopup.style.display === "flex") {
+    gamemodePopup.style.display = "none";
+    gamemode.style.display = "none";
+    gamemodePopup.className = "fade-out-bck";
+    normalModeContainer.style.display = "none";
+  } else {
+    gamemodePopup.style.display = "flex";
+  }
+}
+
 function showHint() {
   if (speechBubble.className === "speech-bubble") {
     speechBubble.innerHTML = hint[wordChooserBrain];
@@ -322,20 +339,5 @@ function showHint() {
 }
 
 
-function showPopup() {
-  if (gamemodePopup.style.display === "none") {
-    arcadeContainer.style.display = "none";
-    normalModeContainer.style.display = "none";
-    gamemodePopup.className = "fade-in-fwd";
-    gamemodePopup.style.display === "flex";
-  }
-  if (gamemodePopup.style.display === "flex") {
-    gamemodePopup.style.display = "none";
-    gamemode.style.display = "none";
-    gamemodePopup.className = "fade-out-bck";
-    normalModeContainer.style.display = "none";
-  } else {
-    gamemodePopup.style.display = "flex";
-  }
-}
+
 
