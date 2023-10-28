@@ -231,6 +231,17 @@ i {
   margin-top: 100px;
   position: absolute;
 }
+#notification-completed {
+  display: none;
+  font-size: 1.5rem;
+  border-radius: 12px;
+  background: var(--winner-green);
+  width: 200px;
+  text-align: center;
+  margin-left: 220px;
+  margin-top: 100px;
+  position: absolute;
+}
 
 #notification-winner {
   display: none;
@@ -244,11 +255,14 @@ i {
   position: absolute;
 }
 
-#notification-completed {
+
+
+#notification-entered-letter {
   display: none;
   font-size: 1.5rem;
   border-radius: 12px;
-  background: var(--winner-green);
+  background: var(--trophy-gold);
+  color: black;
   width: 200px;
   text-align: center;
   margin-left: 220px;
@@ -269,21 +283,19 @@ i {
   position: absolute;
 }
 
-#notification-entered-letter {
-  display: none;
-  font-size: 1.5rem;
-  border-radius: 12px;
-  background: var(--trophy-gold);
-  color: black;
-  width: 200px;
-  text-align: center;
-  margin-left: 220px;
-  margin-top: 100px;
-  position: absolute;
-}
+
 
 .fa-heart {
   color: red;
+}
+#campaign-container {
+  padding-bottom: 200px;
+  margin-bottom: 200px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  display: none;
+  position: absolute;
 }
 
 .input-container {
@@ -296,15 +308,7 @@ i {
   position: absolute;
 }
 
-#campaign-container {
-  padding-bottom: 200px;
-  margin-bottom: 200px;
-  margin: 10px;
-  display: flex;
-  flex-direction: row;
-  display: none;
-  position: absolute;
-}
+
 
 #normal-mode,
 #arcade-mode {
@@ -474,16 +478,7 @@ i {
   color: black;
   border: 1px solid var(--purple-primary);
 }
-.modal-background {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 1;
-}
+
 
 /* Style for the modal content */
 .modal-content {
@@ -496,4 +491,15 @@ i {
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   z-index: 2;
+}
+
+.modal-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
 }
