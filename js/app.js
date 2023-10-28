@@ -1,4 +1,10 @@
 
+
+let guesses1 = document.getElementById("slider1");
+let words1 = document.getElementById("slider2");
+let words_count = document.getElementById("slider2");
+
+let playerInput = document.getElementById("player-guess");
 let playBtn = document.getElementById("playBtn");
 let hintBtn = document.getElementById("show-hint");
 let river = document.getElementById("river");
@@ -10,19 +16,6 @@ let arcadeModeBtn = document.getElementById("arcade-mode");
 let modeBtn = document.getElementById("modeBtn");
 let flag=1;
 
-let guesses1 = document.getElementById("slider1");
-let words1 = document.getElementById("slider2");
-let words_count = document.getElementById("slider2");
-
-let playerInput = document.getElementById("player-guess");
-
-
-
-let winNotification = document.getElementById("notification-winner");
-let completedNotification = document.getElementById("notification-completed");
-let lostNotification = document.getElementById("notification-lost");
-let aelNotification = document.getElementById("notification-entered-letter");
-let dblNotification = document.getElementById("notification-double-letter");
 
 
 let speechBubble = document.querySelector("div.speech-bubble");
@@ -39,6 +32,17 @@ let guessDiv = document.getElementById("guessed");
 let playerTile = document.createElement("div");
 let player = document.getElementById("player");
 let blankWord = document.getElementById("word");
+
+
+
+let winNotification = document.getElementById("notification-winner");
+let completedNotification = document.getElementById("notification-completed");
+let lostNotification = document.getElementById("notification-lost");
+let aelNotification = document.getElementById("notification-entered-letter");
+let dblNotification = document.getElementById("notification-double-letter");
+
+
+
 
 
 let blankey = document.createElement("div");
