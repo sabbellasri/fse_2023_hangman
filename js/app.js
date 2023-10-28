@@ -16,6 +16,12 @@ let arcadeModeBtn = document.getElementById("arcade-mode");
 let modeBtn = document.getElementById("modeBtn");
 let flag=1;
 
+let winNotification = document.getElementById("notification-winner");
+let completedNotification = document.getElementById("notification-completed");
+let lostNotification = document.getElementById("notification-lost");
+let aelNotification = document.getElementById("notification-entered-letter");
+let dblNotification = document.getElementById("notification-double-letter");
+
 
 
 let speechBubble = document.querySelector("div.speech-bubble");
@@ -35,11 +41,7 @@ let blankWord = document.getElementById("word");
 
 
 
-let winNotification = document.getElementById("notification-winner");
-let completedNotification = document.getElementById("notification-completed");
-let lostNotification = document.getElementById("notification-lost");
-let aelNotification = document.getElementById("notification-entered-letter");
-let dblNotification = document.getElementById("notification-double-letter");
+
 
 
 
@@ -79,24 +81,6 @@ let arcadeGamesWon = 0;
 
 
 //<!--Game database-->//
-let arrayWords = [
-  "camping",
-  "tent",
-  "fire",
-  "trees",
-  "hatchet",
-  "animals",
-  "canada",
-  "canoe",
-  "lakes",
-  "biology",
-  "astronomy",
-  "Metamorphosis",
-  "Democracy",
-  "Globalization",
-  "psychology"
-];
-
 let hint = {
   0: "the activity of spending a vacation living in a camp, tent, or camper.",
   1: "a portable shelter made of cloth, supported by one or more poles and stretched tight by cords or loops attached to pegs driven into the ground.",
@@ -116,6 +100,26 @@ let hint = {
   15: "The scientific study of the mind and behavior of humans and animals."
 
 };
+
+let arrayWords = [
+  "camping",
+  "tent",
+  "fire",
+  "trees",
+  "hatchet",
+  "animals",
+  "canada",
+  "canoe",
+  "lakes",
+  "biology",
+  "astronomy",
+  "Metamorphosis",
+  "Democracy",
+  "Globalization",
+  "psychology"
+];
+
+
 
 let playerOptions = {
   c1: '<img src="img/boat.png">'
