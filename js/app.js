@@ -78,6 +78,7 @@ let normalGamesLost = 0;
 let achievementCounter = 0;
 let hintCounter = 0;
 let arcadeGamesWon = 0;
+let arr_flag=0;
 
 
 //<!--Game database-->//
@@ -95,9 +96,26 @@ let hint = {
   10: "The study of celestial objects, such as stars, planets, and galaxies.",
   11: "A profound change or transformation, often used in the context of insects' life cycles.",
   12: "A system of government where the citizens have the power to make decisions and choose their leaders.",
-  13: "The process of businesses, cultures, and economies becoming interconnected on a worldwide scale." ,
-  14: "The art of creating three-dimensional forms or figures, often from materials like stone or clay.",
-  15: "The scientific study of the mind and behavior of humans and animals."
+  13: "The process of businesses, cultures, and economies becoming interconnected on a worldwide scale.",
+  14: "The scientific study of the mind and behavior of humans and animals.",
+  15: "Open to more than one interpretation or unclear.",
+  16: "Dealing with things sensibly and realistically.",
+  17: "Lasting for a very short time.",
+  18: "Having a harmful effect, especially in a gradual or subtle way.",
+  19: "Present, appearing, or found everywhere", 
+  20: "Showing great attention to detail; very careful and precise.",
+  21: "Well-meaning and kindly",
+  22: "Fluent or persuasive in speaking or writing.",
+  23: "A sentimental longing or affection for the past",
+  24: "Eagerness and willingness to do something.",
+  25: "Too great or extreme to be expressed or described in words.",
+  26: "Kept secret, especially because it would not be approved of.",
+  27: "Wanting or devouring great quantities of food.",
+  28: "intended for or understood by only a small number of people with special knowledge.",
+  29: "Producing much fruit or foliage or many offspring.",
+  30: "Pleasantly smooth and musical to hear.",
+  31: "Extremely idealistic; unrealistic and impractical.",
+  32: " Make (someone) weak and infirm."
 
 };
 
@@ -113,12 +131,31 @@ let arrayWords = [
   "lakes",
   "biology",
   "astronomy",
-  "Metamorphosis",
-  "Democracy",
-  "Globalization",
-  "psychology"
+  "metamorphosis",
+  "democracy",
+  "globalization",
+  "psychology",
+  "ambiguous",
+  "pragmatic",
+  "ephemeral",
+  "pernicious",
+  "ubiquitous",
+  "meticulous",
+  "benevolent",
+  "eloquent",
+  "nostalgia",
+  "alacrity",
+  "ineffable",
+  "surreptitious",
+  "voracious",
+  "esoteric",
+  "prolific",
+  "mellifluous",
+  "quixotic",
+  "debilitate"
 ];
 
+let dummy_arr=[];
 
 
 let playerOptions = {
@@ -166,6 +203,8 @@ function playBt1()
 {
    w_c=words1.value;
    i1=words1.value;
+   dummy_arr=[];
+   wordcount.textContent=w_c;
    playButton();
  
 }
@@ -198,10 +237,22 @@ function gameReset() {
 
 
 function wordChooser() {
+  arr_flag=0;
+
+  while(arr_flag===0)
+  {
   wordChooserBrain = Math.floor(Math.random()*arrayWords.length );
   waterfall.style.display = "block";
   river.textContent = "";
   wordChoosen = arrayWords[wordChooserBrain];
+  if((dummy_arr.includes(wordChoosen))!==true)
+  {
+   dummy_arr.push(wordChoosen);
+   arr_flag=1;
+   //alert(wordChoosen)
+   
+  }
+}
   playerLife = wordChoosen.length;
   wordArray = wordChoosen.split("");
   return wordChoosen;
